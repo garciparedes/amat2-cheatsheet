@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{multicol}
+\usepackage[margin={26mm, 22mm}]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+{\renewcommand{\arraystretch}{1.5}
+
+\title{Ampliación de Matemáticas 2: Formulario}
+\author{Sergio García Prado \\ \texttt{sergio@garciparedes.me}}
+
+\begin{document}
+
+  \maketitle
+  \begin{multicols}{2}
+
+
+    \section{Cambio de Variable}
+
+      \paragraph{Jacobiano}
+
+      \begin{align*}
+        \left|J\right| &= abs\left(det\left(
+          \begin{array}{ccc}
+            \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w} \\
+            \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w} \\
+            \frac{\partial z}{\partial u} & \frac{\partial z}{\partial v} & \frac{\partial z}{\partial w}
+          \end{array}
+        \right)\right)
+      \end{align*}
+
+
+      \paragraph{Coordenadas Esféricas}
+
+        \begin{align*}
+          T &:
+          \begin{cases}
+            x &= r \cdot sen(\alpha) \cdot cos(\beta) \\
+            y &= r \cdot sen(\alpha) \cdot sen(\beta) \\
+            z &= r \cdot cos(\alpha) \\
+          \end{cases} \\
+          \left|J\right| &= r ^ 2 \cdot sen(\alpha)
+        \end{align*}
+
+      \paragraph{Coordenadas Cilíndricas}
+
+        \begin{align*}
+          T &:
+          \begin{cases}
+            z &= r \cdot cos(\alpha)\\
+            y &= r \cdot sin(\alpha)\\
+            z &= z \\
+          \end{cases} \\
+          \left|J\right| &= r
+        \end{align*}
+
+    \section{Integral Impropia}
+
+      \paragraph{Criterios de Comparación}
+        \begin{align*}
+          B &:= \text{Interior de bola de radio 1 centrada en 0} \\
+          B^* &:= \text{Exterior de bola de radio 1 centrada en 0} \\
+          r &= \sqrt{x_1^2 + ... + x_n^2}
+        \end{align*}
+        \begin{align*}
+          \int_B r^{-\alpha} dx_1...dx_n &
+          \begin{cases}
+            \alpha < n & convergente\\
+            \alpha \geq n & divergente
+          \end{cases}
+        \end{align*}
+
+        \begin{align*}
+          \int_{B^*}r^{-\alpha} dx_1...dx_n &
+          \begin{cases}
+            \alpha > n & convergente\\
+            \alpha \leq n & divergente
+          \end{cases}
+        \end{align*}
+    \section{Ecuación en Diferencias}
+  \end{multicols}
+
+\end{document}
