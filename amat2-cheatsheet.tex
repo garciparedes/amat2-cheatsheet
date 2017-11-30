@@ -83,6 +83,48 @@
           \end{cases}
         \end{align*}
     \section{Ecuación en Diferencias}
+
+      \paragraph{Solución Particular del problema homogéneo}
+
+        \begin{align*}
+          \{k^nr^k \}&= \{k^n\rho^k cos(\theta k)\}\\
+          \{k^n\bar{r}^k \} &=\{k^n\rho^k sin(\theta k)\}
+        \end{align*}
+
+      \paragraph{Solución Particular del problema no homogéneo}
+
+      \begin{align*}
+        b_k &= \rho^k(P_p(k) cos(\theta k) + Q_q(k) sin(\theta k ))\\
+        z_k &= k^s\rho^k(P^*_m(k) cos(\theta k) + Q^*_m(k) sin(\theta k ))
+      \end{align*}
+
+
+      \begin{tabular}{c | l}
+        $b_k$ & $z_k$ \\ \hline
+        $C$ & $A$ \\
+        $k^t$ & $A_tk^t + ... + A_1k^1 + A_0$ \\
+        $C^k$ & $AC^k$ \\
+        $k^tC^k$ & $C^k(A_tk^t + ... + A_1k^1 + A_0)$\\
+        $sin(\theta k)$ & $Acos(\theta k) + Bsin(\theta k)$ \\
+        $cos(\theta k)$ & $Acos(\theta k) + Bsin(\theta k)$
+      \end{tabular}
+
+    \appendix
+    \section{Trigonometría}
+
+      \paragraph{Valores de Referencia}
+
+      \begin{align*}
+        sin\left(0\right) = 0 && sin\left(\frac{\pi}{4}\right) = \frac{\sqrt{2}}{2} && sin\left(\frac{\pi}{2}\right) = 1 \\
+        cos\left(0\right) = 1 && cos\left(\frac{\pi}{4}\right) = \frac{\sqrt{2}}{2} && cos\left(\frac{\pi}{2}\right) = 0
+      \end{align*}
+
+      \paragraph{Igualdades Trigonométricas}
+
+      \begin{align*}
+        sin(a + b) &= sin(a)cos(b) + sen(b)cos(a) \\
+        cos(a + b) &= cos(a)cos(b) - sen(b)sen(a)
+      \end{align*}
   \end{multicols}
 
 \end{document}
