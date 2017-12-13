@@ -8,7 +8,7 @@
 \usepackage{amssymb}
 \renewcommand{\arraystretch}{1.5}
 
-\title{Ampliación de Matemáticas 2: Formulario\footnote{\texttt{https://github.com/garciparedes/amat2-cheatsheet}}}
+\title{\vspace{-2em}Ampliación de Matemáticas 2: Formulario\footnote{\texttt{https://github.com/garciparedes/amat2-cheatsheet}}}
 \author{Sergio García Prado \\ \texttt{sergio@garciparedes.me}}
 
 \begin{document}
@@ -25,7 +25,7 @@
       \paragraph{Jacobiano}
 
       \begin{align*}
-        \left|J\right| &= abs\left(det\left(
+        J(T) &= abs\left(det\left(
           \begin{array}{ccc}
             \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} & \frac{\partial x}{\partial w} \\
             \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v} & \frac{\partial y}{\partial w} \\
@@ -33,7 +33,6 @@
           \end{array}
         \right)\right)
       \end{align*}
-
 
       \paragraph{Coordenadas Esféricas}
 
@@ -44,7 +43,7 @@
             y &= r \cdot sen(\alpha) \cdot sen(\beta) \\
             z &= r \cdot cos(\alpha) \\
           \end{cases} \\
-          \left|J\right| &= r ^ 2 \cdot sen(\alpha)
+          J(T) &= r ^ 2 \cdot sen(\alpha)
         \end{align*}
 
         \begin{align*}
@@ -60,11 +59,12 @@
             y &= r \cdot sin(\alpha)\\
             z &= z \\
           \end{cases} \\
-          \left|J\right| &= r
+          J(T) &= r
         \end{align*}
         \begin{align*}
-          r > 0 &&  \alpha \in[0,2\pi] && z \in R
+          r \geq 0 &&  \alpha \in[0,2\pi] && z \in R
         \end{align*}
+
 
     \section{Integral Impropia}
 
@@ -89,6 +89,8 @@
             \alpha \leq n & divergente
           \end{cases}
         \end{align*}
+
+
     \section{Ecuación en Diferencias}
 
       \paragraph{Solución Particular del problema homogéneo}
@@ -100,21 +102,30 @@
 
       \paragraph{Solución Particular del problema no homogéneo}
 
-      \begin{align*}
-        b_k &= \rho^k(P_p(k) cos(\theta k) + Q_q(k) sin(\theta k ))\\
-        z_k &= k^s\rho^k(P^*_m(k) cos(\theta k) + Q^*_m(k) sin(\theta k ))
-      \end{align*}
+        \begin{align*}
+          b_k &= \rho^k(P_p(k) cos(\theta k) + Q_q(k) sin(\theta k ))\\
+          z_k &= k^s\rho^k(P^*_m(k) cos(\theta k) + Q^*_m(k) sin(\theta k ))
+        \end{align*}
+
+        \begin{tabular}{c | l}
+          $b_k$ & $z_k$ \\ \hline
+          $C$ & $A$ \\
+          $k^t$ & $A_tk^t + ... + A_1k^1 + A_0$ \\
+          $C^k$ & $AC^k$ \\
+          $k^tC^k$ & $C^k(A_tk^t + ... + A_1k^1 + A_0)$\\
+          $sin(\theta k)$ & $Acos(\theta k) + Bsin(\theta k)$ \\
+          $cos(\theta k)$ & $Acos(\theta k) + Bsin(\theta k)$
+        \end{tabular}
 
 
-      \begin{tabular}{c | l}
-        $b_k$ & $z_k$ \\ \hline
-        $C$ & $A$ \\
-        $k^t$ & $A_tk^t + ... + A_1k^1 + A_0$ \\
-        $C^k$ & $AC^k$ \\
-        $k^tC^k$ & $C^k(A_tk^t + ... + A_1k^1 + A_0)$\\
-        $sin(\theta k)$ & $Acos(\theta k) + Bsin(\theta k)$ \\
-        $cos(\theta k)$ & $Acos(\theta k) + Bsin(\theta k)$
-      \end{tabular}
+    \section{Métodos Numéricos}
+
+      \paragraph{Integración Numérica}
+      [TODO ]
+
+      \paragraph{Derivación Numérica}
+      [TODO ]
+
 
     \appendix
     \section{Trigonometría}
@@ -132,6 +143,8 @@
         sin(a + b) &= sin(a)cos(b) + sen(b)cos(a) \\
         cos(a + b) &= cos(a)cos(b) - sen(b)sen(a)
       \end{align*}
+
+      
   \end{multicols}
 
 \end{document}
